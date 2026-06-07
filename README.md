@@ -1,4 +1,5 @@
 # simple-qrcode
+
 > Built with [Elm Land](https://elm.land) 🌈
 
 ## Local development
@@ -10,7 +11,6 @@ npx elm-land server
 
 ## Deploying to production
 
-Elm Land projects are most commonly deployed as static websites. 
+This elm app is deployed in suge.
 
-Please visit [the "Deployment" guide](https://elm.land/guide/deploying) to learn more
-about deploying your app for free using Netlify or Vercel.
+http://relieved-downtown.surge.sh/
