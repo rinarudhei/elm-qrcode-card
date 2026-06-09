@@ -1,4 +1,4 @@
-module Pages.Home_ exposing (page)
+module Main exposing (main)
 
 import Color
 import Element exposing (Element, centerX, centerY, clip, column, el, fill, height, htmlAttribute, image, layout, paddingXY, paragraph, px, rgb255, rgba255, shrink, spacing, text, width)
@@ -6,8 +6,8 @@ import Element.Background as Background
 import Element.Border as Border
 import Element.Font as Font exposing (bold, center, color, size)
 import Element.Region exposing (heading)
+import Html exposing (Html)
 import Html.Attributes exposing (style)
-import View exposing (View)
 
 
 fontOutfit : Element.Attribute msg
@@ -64,17 +64,13 @@ slate900Element =
     toElementColor slate900
 
 
-page : View msg
-page =
-    { title = "Homepage"
-    , body =
-        [ layout
-            [ Background.color slate300Element
-            , fontOutfit
-            ]
-            qrCard
+main : Html msg
+main =
+    layout
+        [ Background.color slate300Element
+        , fontOutfit
         ]
-    }
+        qrCard
 
 
 qrCard : Element msg
@@ -112,7 +108,7 @@ qrCodeImage =
             [ width fill
             , height fill
             ]
-            { src = "./image-qr-code.png"
+            { src = "./static/image-qr-code.png"
             , description = "qr code"
             }
         )

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QRCode - Frontend Mentor</title>
+
+    <!-- CSS files -->
+    <link rel="stylesheet" href="./static/fonts/fonts.css" />
+
+    <!-- Optional: Add any additional CSS here -->
+    <style>
+      /* Basic reset and body styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family:
+          "Outfit",
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
+        background-color: #f5f5f5;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* Elm app will mount here */
+      #app {
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <!-- JavaScript file -->
+    <script src="./index.js"></script>
+
+    <!-- Initialize your Elm app -->
+    <script>
+      // Check if Elm module is available
+      if (typeof Elm !== "undefined" && Elm.Main) {
+        var app = Elm.Main.init({
+          node: document.getElementById("app"),
+        });
+      } else {
+        console.error(
+          "Elm module not found. Make sure index.js is loaded correctly.",
+        );
+      }
+    </script>
+  </body>
+</html>
